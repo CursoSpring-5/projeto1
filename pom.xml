@@ -39,6 +39,19 @@
 			<scope>runtime</scope>
 		</dependency>
 				
+	  <!-- Use MySQL Connector-J -->
+         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+		
+		<!-- Use Postgresql Connector-J -->
+		<dependency>
+  			<groupId>org.postgresql</groupId>
+  			<artifactId>postgresql</artifactId>
+         </dependency> 
+				
+				
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -49,11 +62,7 @@
     		<artifactId>maven-resources-plugin</artifactId>
    			 <version>3.0.2</version>
 		</dependency>
-		<dependency>
-  			<groupId>org.postgresql</groupId>
-  			<artifactId>postgresql</artifactId>
-  			
-         </dependency> 
+		
 	     </dependencies> 
 	     
 	<build>
