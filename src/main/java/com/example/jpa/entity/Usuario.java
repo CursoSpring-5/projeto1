@@ -4,16 +4,25 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-@Entity
+import org.springframework.data.mongodb.core.mapping.Document;
+
+/* Para mapeamento em bancos relacionais utiliza-se a anotação @Entity 
+ * Para mapeamento em banco NoSQL como o Mongo utiliza-se a anotação @Document
+ */
+//@Entity
+@Document
 public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	/* Altera a propriedade de Long para String para usar no MongoDB e também não precisa mais da anotação "ManyToMany"
 	private Long id;
+	 */
+	private String id;
 	private String name;
 	private String email;
 
-	@ManyToMany
+	//@ManyToMany
 	private Set<Regra> roles;
 
 	// Criação dos Construtores
@@ -31,11 +40,11 @@ public class Usuario {
 
 	// Getters e Setters
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

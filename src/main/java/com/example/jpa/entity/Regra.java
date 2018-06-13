@@ -2,20 +2,24 @@ package com.example.jpa.entity;
 
 import javax.persistence.*;
 
-@Entity
+import org.springframework.data.mongodb.core.mapping.Document;
+
+//@Entity
+@Document
 public class Regra {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 
-	private Long id;
+	//private Long id;
+	private String id;
 	private String name;
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
